@@ -5,7 +5,8 @@ In this project my task was to predict number of cash withdrawals from an ATM by
 IDENTITY/ (IDENTITY.mean – IDENTITY.min)
 2) Converted YEAR to 1 if 2019 else if 2018 0. (It was possible since whole data contains only two different years.) 
 3) Converted TRX_type to 1 if 2 else if 1 0.
-4) For Region, Month and Day; I used OneHotEncoder to convert them all to 1s and 0s. \n
+4) For Region, Month and Day; I used OneHotEncoder to convert them all to 1s and 0s.
+
 After preprocessing my Data contained 66 fields: 31 for Day, 20 for Region, 12 for Month, 1 for Year, 1 for TRX_type and 1 for IDENTITY. 
 Creating and training each learner was easy using Sklearn (2 lines each). The real challenge was to preprocess data according to present learners. For Random Forest: I used 200 different trees since error stops decreasing drastically after 200. For Multilayer Perceptron: I included 200 hidden layers because it is the default number, I used epsilon value of 1 since our values are in the range of 0 – 150, and a maximum iteration number of 500.
 Random Forest RMSE before training whole data:  18.75603412138406
